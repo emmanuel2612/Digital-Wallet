@@ -20,20 +20,20 @@
 
 <body>
 
-    <main class="home">
+    <header id="global-header">
+        <div class="global-wrap">
+            <h1 class="page-title">Wallet</h1>
 
-
-        <header>
-            <div class="global-wrap">
-                <h1>Wallet</h1>
-
-                <div>
-                    <i class="far fa-bell"></i>
-                    <div id="bell-circle"></div>
-                </div>
-
+            <div>
+                <i class="far fa-bell"></i>
+                <div id="bell-circle"></div>
             </div>
-        </header>
+
+        </div>
+    </header>
+
+    <main class="wallet-page">
+
 
         <div class="card-container">
             <div class="global-wrap">
@@ -128,6 +128,35 @@
                     <h3 class="transaction-price">-£12.63</h3>
                 </div>
 
+
+                <div class="transaction-box" id="transaction-1">
+                    <figure>
+                        <img src="images/gofundme.png">
+                    </figure>
+
+                    <div class="transaction-box-left">
+                        <h3>GoFundMe</h3>
+                        <p>19:05</p>
+
+                        <div class="more-info" id="more-info-1">
+                            <p>Visa Debit Card</p>
+                            <p>London, UK</p>
+                            <br>
+                            <a>Report Transaction</a>
+                        </div>
+
+                    </div>
+
+                    <h3 class="transaction-price">-£1.00</h3>
+                </div>
+
+
+
+
+
+
+
+
                 <div class="transaction-box">
                     <figure>
                         <img src="images/mcdonalds.png">
@@ -218,10 +247,74 @@
     </main>
 
 
+
+
+
+
+
+
+    <main class="donate-page">
+        <figure>
+
+        </figure>
+        <div class="global-wrap">
+
+            <h1>End Sars</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam venenatis diam nec augue bibendum, vitae eleifend diam facilisis.
+                Morbi mollis nec enim sit amet pulvinar.</p>
+
+                <div id="progress-text">
+                <h3>20% Funded</h3>
+
+                <h3>30 days to go</h3>
+            </div>
+
+
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+
+
+        </div>
+
+        <footer>
+
+            <button>Donate Now</button>
+
+        </footer>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="menu">
         <div class="global-wrap">
 
-            <figure>
+            <figure class="wallet-page-button">
                 <i class="fas fa-wallet"></i>
                 <p>Wallet</p>
             </figure>
@@ -231,11 +324,19 @@
                 <p>Payments</p>
             </figure>
 
+            <figure class="donate-page-button">
+                <i class="fas fa-heart"></i>
+                <p>Donate</p>
+            </figure>
+
+
             <figure>
                 <i class="fas fa-user-circle"></i>
                 <p>Account</p>
             </figure>
-        
+
+
+
 
         </div>
 
