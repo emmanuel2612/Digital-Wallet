@@ -20,6 +20,15 @@
 
 <body>
 
+    <div id="donation-alert-container">
+
+        <div id="alert-box">
+            <i class="fas fa-check"></i>
+            <h2>Donated</h2>
+        </div>
+    </div>
+
+
     <header id="global-header">
         <div class="global-wrap">
             <h1 class="page-title">Wallet</h1>
@@ -105,7 +114,7 @@
 
                 <div id="seperator"></div>
 
-                <p class="date">Today</p>
+                <p class="date" id="today">Today</p>
 
                 <div class="transaction-box" id="transaction-1">
                     <figure>
@@ -287,11 +296,13 @@
                 <img src="images/mastercard.png">
             </figure>
 
-            <button>Donate Now</button>
+            <button id="donate-button">Donate Now</button>
 
         </footer>
 
     </main>
+
+
 
 
 
@@ -348,6 +359,35 @@
         </div>
 
     </footer>
+
+
+
+    <!-- Templates -->
+    <template class="transction-template">
+
+    <div class="transaction-box" id="transaction-1">
+        <figure>
+            <img src="images/gofundme.png">
+        </figure>
+
+        <div class="transaction-box-left">
+            <h3>GoFundMe</h3>
+            <p>19:05</p>
+
+            <div class="more-info" id="more-info-1">
+                <p>Visa Debit Card</p>
+                <p>London, UK</p>
+                <br>
+                <a>Report Transaction</a>
+            </div>
+
+        </div>
+
+        <h3 class="transaction-price">-£1.00</h3>
+    </div>
+
+    </template>
+
 
 </body>
 

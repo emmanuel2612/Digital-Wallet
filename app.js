@@ -86,6 +86,46 @@ window.onload = () =>{
     }, 100);
 
 
+    /* Donate Page */
+
+const donateButton = document.querySelector('#donate-button');
+
+const donateAlert = document.querySelector('#donation-alert-container');
+
+donateButton.onclick = () => {
+
+    if (donateButton.innerHTML === "Donate Now"){
+        donateButton.innerHTML = "Donated";
+
+        donateAlert.style.display = "flex";
+
+        setTimeout(() => {
+            donateAlert.style.opacity = "1";
+        }, 200);
+
+        setTimeout(() => {
+            donateAlert.style.opacity = "0";
+            ontransitionend = () =>{
+                donateAlert.style.display = "none";
+            }
+        }, 2000);
+
+        
+
+
+
+
+    }
+
 
 
 }
+
+
+}
+
+
+
+
+
+
