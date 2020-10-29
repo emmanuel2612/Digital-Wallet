@@ -21,10 +21,10 @@
 <body>
 
     <!-- Alerts -->
-    
+
     <div id="twitter-alert-container">
         <div id="twitter-alert">
-        <p>It's your friends birthday</p>
+            <p>It's your friends birthday</p>
         </div>
 
     </div>
@@ -132,8 +132,8 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>Uber</h3>
-                        <p>19:05</p>
+                        <h3 class="company">Uber</h3>
+                        <p class="time">19:05</p>
 
                         <div class="more-info" id="more-info-1">
                             <p>Visa Debit Card</p>
@@ -145,28 +145,6 @@
                     </div>
 
                     <h3 class="transaction-price">-£12.63</h3>
-                </div>
-
-
-                <div class="transaction-box" id="transaction-1">
-                    <figure>
-                        <img src="images/gofundme.png">
-                    </figure>
-
-                    <div class="transaction-box-left">
-                        <h3>GoFundMe</h3>
-                        <p>19:05</p>
-
-                        <div class="more-info" id="more-info-1">
-                            <p>Visa Debit Card</p>
-                            <p>London, UK</p>
-                            <br>
-                            <a>Report Transaction</a>
-                        </div>
-
-                    </div>
-
-                    <h3 class="transaction-price">-£1.00</h3>
                 </div>
 
 
@@ -182,8 +160,8 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>McDonalds</h3>
-                        <p>13:52</p>
+                        <h3 class="company">McDonalds</h3>
+                        <p class="time">13:52</p>
                     </div>
 
                     <h3 class="transaction-price">-£0.99</h3>
@@ -195,8 +173,8 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>Uber</h3>
-                        <p>8:05</p>
+                        <h3 class="company">Uber</h3>
+                        <p class="time">8:05</p>
                     </div>
 
                     <h3 class="transaction-price">-£12.50</h3>
@@ -210,8 +188,8 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>Uber</h3>
-                        <p>8:05</p>
+                        <h3 class="company">Uber</h3>
+                        <p class="time">8:05</p>
 
                     </div>
 
@@ -224,8 +202,8 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>Uber</h3>
-                        <p>8:05</p>
+                        <h3 class="company">Uber</h3>
+                        <p class="time">8:05</p>
                     </div>
 
                     <h3 class="transaction-price">-$12.50</h3>
@@ -237,7 +215,7 @@
                     </figure>
 
                     <div class="transaction-box-left">
-                        <h3>Uber</h3>
+                        <h3 class="company">Uber</h3>
                         <p>8:05</p>
                     </div>
 
@@ -373,28 +351,28 @@
 
 
     <!-- Templates -->
-    <template class="transction-template">
+    <template class="transaction-template">
 
-    <div class="transaction-box" id="transaction-1">
-        <figure>
-            <img src="images/gofundme.png">
-        </figure>
+        <div class="transaction-box">
+            <figure>
+                <img src="images/gofundme.png">
+            </figure>
 
-        <div class="transaction-box-left">
-            <h3>GoFundMe</h3>
-            <p>19:05</p>
+            <div class="transaction-box-left">
+                <h3 class="company">GoFundMe</h3>
+                <p class="time">19:05</p>
 
-            <div class="more-info" id="more-info-1">
-                <p>Visa Debit Card</p>
-                <p>London, UK</p>
-                <br>
-                <a>Report Transaction</a>
+                <div class="more-info">
+                    <p>Visa Debit Card</p>
+                    <p>London, UK</p>
+                    <br>
+                    <a>Report Transaction</a>
+                </div>
+
             </div>
 
+            <h3 class="transaction-price">-£1.00</h3>
         </div>
-
-        <h3 class="transaction-price">-£1.00</h3>
-    </div>
 
     </template>
 

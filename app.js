@@ -110,16 +110,38 @@ window.onload = () => {
                 }
             }, 2000);
 
-
-
-
-
+            addTransaction();
 
         }
 
 
 
     }
+
+    /* Add Transaction */
+
+    const addTransaction = () => {
+
+        const transactionOne = document.querySelector('#transaction-1');
+
+        const date = new Date();
+
+        var transactionTemplate = document.querySelector('.transaction-template');
+    
+        transactionTemplate.content.querySelector('.time').innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+
+        var clone = document.importNode(transactionTemplate.content, true);
+
+        transactionOne.before(clone);
+
+
+    }
+
+
+
+
+
+
 
 
     /* Alerts */
@@ -134,17 +156,19 @@ window.onload = () => {
         twitterAlert.style.transform = 'translateY(0%)';
     }, 7000);
 
-    
+
     /* Hide Alert */
 
     const twitterAlertHammer = new Hammer(twitterAlert);
 
-   
+
     twitterAlertHammer.on('swipeup', function () {
         twitterAlert.style.transform = 'translateY(-120px)';
     });
 
-    twitterAlertHammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL })
+    twitterAlertHammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL, velocity: -100 })
+
+
 
 
 
