@@ -1,15 +1,15 @@
-window.onload = () =>{
+window.onload = () => {
 
-   
+
     const transactionOne = document.getElementById("transaction-1");
 
     transactionOne.onclick = () => {
 
         const moreInfo = document.getElementById("more-info-1");
 
-        if (moreInfo.style.display == "block"){
+        if (moreInfo.style.display == "block") {
             moreInfo.style.display = "none";
-        } else{
+        } else {
             moreInfo.style.display = "block";
         }
     }
@@ -37,7 +37,7 @@ window.onload = () =>{
         header.style.display = "block";
     }
 
-    
+
 
     const showDonatePage = () => {
         donatePage.style.display = "flex";
@@ -88,38 +88,69 @@ window.onload = () =>{
 
     /* Donate Page */
 
-const donateButton = document.querySelector('#donate-button');
+    const donateButton = document.querySelector('#donate-button');
 
-const donateAlert = document.querySelector('#donation-alert-container');
+    const donateAlert = document.querySelector('#donation-alert-container');
 
-donateButton.onclick = () => {
+    donateButton.onclick = () => {
 
-    if (donateButton.innerHTML === "Donate Now"){
-        donateButton.innerHTML = "Donated";
+        if (donateButton.innerHTML === "Donate Now") {
+            donateButton.innerHTML = "Donated";
 
-        donateAlert.style.display = "flex";
+            donateAlert.style.display = "flex";
 
-        setTimeout(() => {
-            donateAlert.style.opacity = "1";
-        }, 200);
+            setTimeout(() => {
+                donateAlert.style.opacity = "1";
+            }, 200);
 
-        setTimeout(() => {
-            donateAlert.style.opacity = "0";
-            ontransitionend = () =>{
-                donateAlert.style.display = "none";
-            }
-        }, 2000);
+            setTimeout(() => {
+                donateAlert.style.opacity = "0";
+                ontransitionend = () => {
+                    donateAlert.style.display = "none";
+                }
+            }, 2000);
 
-        
 
+
+
+
+
+        }
 
 
 
     }
 
 
+    /* Alerts */
 
-}
+    const twitterAlert = document.querySelector('#twitter-alert-container');
+
+    setTimeout(() => {
+        twitterAlert.style.display = "block";
+    }, 6000);
+
+    setTimeout(() => {
+        twitterAlert.style.transform = 'translateY(0%)';
+    }, 7000);
+
+    
+    /* Hide Alert */
+
+    const twitterAlertHammer = new Hammer(twitterAlert);
+
+   
+    twitterAlertHammer.on('swipeup', function () {
+        twitterAlert.style.transform = 'translateY(-120px)';
+    });
+
+    twitterAlertHammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL })
+
+
+
+
+
+
 
 
 }
