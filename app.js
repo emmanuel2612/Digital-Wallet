@@ -1,6 +1,13 @@
 window.onload = () => {
 
 
+    /*Global Variables*/
+
+    const date = new Date();
+
+    /* End of global variables */
+
+
     const transactionOne = document.getElementById("transaction-1");
 
     transactionOne.onclick = () => {
@@ -72,18 +79,23 @@ window.onload = () => {
 
 
 
+    /* Show Notifications */
+
+    const notificationBell = document.querySelector('#notification-bell');
+    const notificationPage = document.querySelector('#notification-container');
+
+    notificationBell.onclick = () => {
+        notificationPage.style.display = "block";
+
+        setTimeout(() => {
+            notificationPage.style.transform = "translate(0%)";
+        });
+
+    }
 
 
-    /* Card Transition */
 
-    setTimeout(() => {
-        const cardTwo = document.getElementById("card-2");
-        const cardThree = document.getElementById("card-3");
 
-        cardTwo.style.transform = 'translateX(0%)';
-        cardThree.style.transform = 'translateX(0%)';
-
-    }, 100);
 
 
     /* Donate Page */
@@ -114,8 +126,6 @@ window.onload = () => {
 
         }
 
-
-
     }
 
     /* Add Transaction */
@@ -124,16 +134,13 @@ window.onload = () => {
 
         const transactionOne = document.querySelector('#transaction-1');
 
-        const date = new Date();
-
         var transactionTemplate = document.querySelector('.transaction-template');
-    
+
         transactionTemplate.content.querySelector('.time').innerHTML = `${date.getHours()}:${date.getMinutes()}`;
 
         var clone = document.importNode(transactionTemplate.content, true);
 
         transactionOne.before(clone);
-
 
     }
 
@@ -156,6 +163,14 @@ window.onload = () => {
         twitterAlert.style.transform = 'translateY(0%)';
     }, 7000);
 
+    const twitterAlertTime = document.querySelector('#twitter-alert-time');
+    twitterAlertTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+
+    const usernames = ["user1", "user2", "user3", "user4", "user5", "user6", "user7,", "user8", "user9", "user10"];
+    let randomUsername = usernames[Math.floor(Math.random() * usernames.length)];
+    const twitterAlertMessage = document.querySelector('#twitter-alert-message');
+    twitterAlertMessage.innerHTML = `It's ${randomUsername}'s birthday today!`;
+
 
     /* Hide Alert */
 
@@ -167,6 +182,16 @@ window.onload = () => {
     });
 
     twitterAlertHammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL, velocity: -100 })
+
+
+    /* Twitter Users */
+
+
+
+
+
+
+
 
 
 
