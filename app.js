@@ -81,17 +81,42 @@ window.onload = () => {
 
     /* Show Notifications */
 
-    const notificationBell = document.querySelector('#notification-bell');
     const notificationPage = document.querySelector('#notification-container');
+
+    const notificationBell = document.querySelector('#notification-bell');
+   
+    const bellCircle = document.querySelector('#bell-circle');
 
     notificationBell.onclick = () => {
         notificationPage.style.display = "block";
 
         setTimeout(() => {
             notificationPage.style.transform = "translate(0%)";
+
+            ontransitionend = () => {
+            bellCircle.style.display = "none";
+            }
+            
         });
 
     }
+
+    /* Hide Notifications */
+
+    const notificationClose = document.querySelector('#notification-close');
+
+    notificationClose.onclick = () => {
+        notificationPage.style.transform = "translate(100%)";
+
+        setTimeout(() => {
+            notificationPage.style.display = "none";
+        },300);
+
+    }
+
+    
+
+
 
 
 
