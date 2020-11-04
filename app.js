@@ -84,7 +84,7 @@ window.onload = () => {
     const notificationPage = document.querySelector('#notification-container');
 
     const notificationBell = document.querySelector('#notification-bell');
-   
+
     const bellCircle = document.querySelector('#bell-circle');
 
     notificationBell.onclick = () => {
@@ -94,9 +94,9 @@ window.onload = () => {
             notificationPage.style.transform = "translate(0%)";
 
             ontransitionend = () => {
-            bellCircle.style.display = "none";
+                bellCircle.style.display = "none";
             }
-            
+
         });
 
     }
@@ -110,11 +110,20 @@ window.onload = () => {
 
         setTimeout(() => {
             notificationPage.style.display = "none";
-        },300);
+        }, 300);
 
     }
 
+    /* Notification Messages */
+
+    const messageOne = document.querySelector('#message-1');
+    const messageTwo = document.querySelector('#message-2');
+
+    messageOne.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet lectus sed libero pretium vestibulum sit amet eu nisi. Sed eget commodo elit. Sed pretium massa urna, vel scelerisque lectus accumsan id. Aliquam fermentum congue massa ut posuere. Vestibulum euismod libero et risus porta lacinia. Sed sed sollicitudin eros. Maecenas sit amet sem dignissim dui blandit lacinia vel sed odio. Aenean egestas purus sit amet odio vulputate, sit amet viverra est vulputate. Morbi at dapibus lectus, sed congue tellus."
+    messageTwo.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet lectus sed libero pretium vestibulum sit amet eu nisi. Sed eget commodo elit. Sed pretium massa urna, vel scelerisque lectus accumsan id. Aliquam fermentum congue massa ut posuere. Vestibulum euismod libero et risus porta lacinia. Sed sed sollicitudin eros. Maecenas sit amet sem dignissim dui blandit lacinia vel sed odio. Aenean egestas purus sit amet odio vulputate, sit amet viverra est vulputate. Morbi at dapibus lectus, sed congue tellus."
+
     
+
 
 
 
@@ -210,16 +219,6 @@ window.onload = () => {
 
 
     /* Twitter Users */
-
-
-
-
-
-
-
-
-
-
 
 
 
