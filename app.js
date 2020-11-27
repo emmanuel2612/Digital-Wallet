@@ -142,6 +142,7 @@ window.onload = () => {
 
         if (donateButton.innerHTML === "Donate Now") {
             donateButton.innerHTML = "Donated";
+            donateButton.style.backgroundColor = "#b1b1b3";
 
             donateAlert.style.display = "flex";
 
